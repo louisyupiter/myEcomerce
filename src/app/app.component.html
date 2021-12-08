@@ -1,4 +1,11 @@
 <app-header></app-header>
-<app-menu-kategori></app-menu-kategori>
+<app-menu-kategori
+  *ngIf="
+    router.url === '/kategori/elektronik' ||
+    router.url === '/kategori/fashion' ||
+    router.url === '/kategori/foods' ||
+    router.url === '/kategori/otomotif' ||
+    router.url === '/'
+  "
+></app-menu-kategori>
 <router-outlet></router-outlet>
-  

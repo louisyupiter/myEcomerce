@@ -4,28 +4,34 @@ import { RouterModule, Routes } from '@angular/router';
 import { FashionComponent } from './fashion/fashion.component';
 import { OtomotifComponent } from './otomotif/otomotif.component';
 import { FoodsComponent } from './foods/foods.component';
+import { KategoriComponent } from './kategori.component';
+import { DetailProductComponent } from './elektronik/detail-product/detail-product.component';
 
-const routes : Routes = [
+const routes: Routes = [
   {
-    path:'elektronik',
-    component:ElektronikComponent,
+    path: 'elektronik',
+    component: ElektronikComponent,
   },
   {
-    path:'fashion',
-    component:FashionComponent
+    path: 'elektronik/detail-product',
+    component: DetailProductComponent,
   },
   {
-    path:'otomotif',
-    component:OtomotifComponent,
+    path: 'fashion',
+    component: FashionComponent,
   },
   {
-    path:'foods',
-    component:FoodsComponent,
-  }
-]
+    path: 'otomotif',
+    component: OtomotifComponent,
+  },
+  {
+    path: 'foods',
+    component: FoodsComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class KategoriRoutingModule { }
+export class KategoriRoutingModule {}
