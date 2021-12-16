@@ -1,18 +1,22 @@
-<div class="card" style="width: 300px;"><a routerLink="detail-product">
-    <img src="assets/img/ac-elektronik.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="product-name">Samsung AC Standart 2.PK</p>
-      <div class="product-price">
+<div *ngFor="let product of products">
+  <div class="card" style="width: 300px">
+    <a routerLink="detail-product">
+      <img src="assets/img/ac-elektronik.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="product-name">{{ product.product_name }}</p>
+        <div class="product-price">
           <div class="rating">
-            <div class="price">Rp.250.000</div>
+            <div class="price">Rp. {{ product.price }}</div>
             <div class="start">
-                <img src="assets/icon/yellow-start.png" alt="" class="icon">
-                <img src="assets/icon/yellow-start.png" alt="" class="icon">
-                <img src="assets/icon/yellow-start.png" alt="" class="icon">
-                <img src="assets/icon/yellow-start.png" alt="" class="icon">
-                <img src="assets/icon/black-start.png" alt="" class="icon">
+              <img src="assets/icon/yellow-start.png" alt="" class="icon" />
+              <img src="assets/icon/yellow-start.png" alt="" class="icon" />
+              <img src="assets/icon/yellow-start.png" alt="" class="icon" />
+              <img src="assets/icon/yellow-start.png" alt="" class="icon" />
+              <img src="assets/icon/black-start.png" alt="" class="icon" />
             </div>
           </div>
+        </div>
       </div>
-    </div>
-</a></div>
+    </a>
+  </div>
+</div>

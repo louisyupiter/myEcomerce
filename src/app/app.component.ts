@@ -13,7 +13,7 @@ export class AppComponent {
   title = 'myEcomerce';
   constructor(private productData : DataProductService, public router: Router)
   {
-    this.productData.products()
+    this.productData.getProducts();
   }
 
 }
